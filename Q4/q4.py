@@ -17,8 +17,6 @@ def main():
     in_max30_stname = []
     out_max30_stname = []
     inout_max30_stname = []
-
-    rank = []
     
     for row in data:
         row = list(map(lambda s : ''.join(s.split()), row))
@@ -47,8 +45,7 @@ def main():
         in_max30_stname.append(in_list[i][0])
         out_max30_stname.append(out_list[i][0])
         inout_max30_stname.append(inout_list[i][0])
-
-        rank.append(i+1)
+        
     f.close()    
 
     p.rc('font', family='Malgun Gothic', size=7)
