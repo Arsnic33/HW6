@@ -48,11 +48,11 @@ def readData():
     rowCount = 1
     
     for row in data:
-        arr = [0]*6
+        arr = []
         for i in range(6):
-            arr[i] = int(row[1+i])
+            arr += [i+1] * int(row[i+1])
         p.subplot(1, 4, rowCount)
-        p.bar(xVal, arr, color=colorType[rowCount-1], label=row[0])
+        p.hist(arr, bins=6, color=colorType[rowCount-1], label=row[0])
         p.legend()
         rowCount += 1
         
